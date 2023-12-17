@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 """Blueprint focuses on routes"""
 views = Blueprint('views', __name__)
 
@@ -6,4 +6,4 @@ views = Blueprint('views', __name__)
 @views.route('/')
 def home():
     """takes us to home page"""
-    return "<h1>Test</h1>"
+    return render_template("home.html")
